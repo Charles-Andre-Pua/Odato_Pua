@@ -5,6 +5,7 @@
              x:Class="Speeches.MainPage"
              NavigationPage.HasNavigationBar="False">
 
+    <!-- Custom Splash screen -->
     <Grid BackgroundColor="White">
         <skia:SKLottieView x:Name="SplashAnimation"
                            Source="speech.json"
