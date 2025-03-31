@@ -1,3 +1,4 @@
+using Speeches.MVVM.ViewModels;
 using System.Diagnostics;
 
 namespace Speeches.Views;
@@ -7,6 +8,8 @@ public partial class Login : ContentPage
 	public Login()
 	{
 		InitializeComponent();
+        LoginVM context = new LoginVM();
+        BindingContext = context;
     }
 
     private void ForgotPassword_Tapped(object sender, TappedEventArgs e)

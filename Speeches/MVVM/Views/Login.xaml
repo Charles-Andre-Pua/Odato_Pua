@@ -47,30 +47,31 @@
                 StrokeThickness="1"
                 StrokeShape="RoundRectangle, 20"
                 Padding="15,10,10,0">
-                <VerticalStackLayout>
-                    <Label
+                    <VerticalStackLayout>
+                        <Label
                         Text="User name / Email"
                         FontSize="15"
                         TextColor="{StaticResource Font Dark}"/>
-                    <HorizontalStackLayout
+                        <HorizontalStackLayout
                         Spacing="5">
-                        <Image>
-                            <Image.Source>
-                                <FontImageSource
+                            <Image>
+                                <Image.Source>
+                                    <FontImageSource
                                     Color="{StaticResource Primary Color}"
                                     Size="20"
                                     FontFamily="Icons"
                                     Glyph="&#xCC01;"/>
-                            </Image.Source>
-                        </Image>
-                        <Entry
-                            VerticalOptions="Center"
-                            HorizontalOptions="Fill"
-                            Placeholder="Username@gmail.com"
-                            TextColor="{StaticResource Font Dark}"/>
-                    </HorizontalStackLayout>
-                </VerticalStackLayout>
-            </Border>
+                                </Image.Source>
+                            </Image>
+                            <Entry
+                                Text="{Binding User.Username}"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Fill"
+                                Placeholder="Username@gmail.com"
+                                TextColor="{StaticResource Font Dark}"/>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
             <!--#endregion-->
             <!--#region Password-->
             <Border
@@ -95,6 +96,7 @@
                         </Image.Source>
                     </Image>
                     <Entry
+                        Text="{Binding User.Password}"
                         IsPassword="True"
                         Placeholder="Password"
                         VerticalOptions="Center"
@@ -106,9 +108,9 @@
             <!--#region Login-->
             <Button
                 Text="Login"
+                Command="{Binding LoginCommand}"
                 TextColor="{StaticResource Font Light}"
-                Background="{StaticResource Secondary Color}"
-                Clicked="Button_Clicked"/>
+                Background="{StaticResource Secondary Color}"/>
             <!--#endregion-->
             <!--#region Create an account | Forgot password-->
             <Grid>
